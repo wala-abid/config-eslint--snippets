@@ -1,0 +1,160 @@
+{
+  // import next components
+  "Nextjs import for link component": {
+    "prefix": "nil",
+    "body": ["import ${1:Link} from 'next/link';"],
+    "description": "next import link"
+  },
+  "Nextjs import for Router(default) component": {
+    "prefix": "nir",
+    "body": ["import ${1:Router} from 'next/router';"],
+    "description": "next import Router(default)"
+  },
+  "Nextjs import for useRouter component": {
+    "prefix": "niur",
+    "body": ["import {useRouter} from 'next/router';"],
+    "description": "next import useRouter"
+  },
+
+  // nextjs imported components usage
+  "Nextjs link component defination with href and as": {
+    "prefix": "linkhref",
+    "body": [
+      "<Link href='${1:routepattern}' as='${2:path}'><a>${3:value}</a></Link>"
+    ],
+    "description": "nextjs usage of link component with href and as"
+  },
+  "Nextjs useRouter component defination": {
+    "prefix": "router",
+    "body": ["const ${1:router} = useRouter();"],
+    "description": "nextjs usage of useRouter component"
+  },
+
+  // nextjs functions
+  "Nextjs getServerSideProps": {
+    "prefix": "getServerSideProps",
+    "body": [
+      "export const getServerSideProps = async (${1:ctx}) => {",
+      "",
+      "",
+      "\treturn {",
+      "\t\tprops:{",
+      "\t\t\t${2:data:null}",
+      "\t\t}",
+      "\t}",
+      "}"
+    ],
+    "description": "Next GetServerSideProps"
+  },
+
+  "Nextjs getStaticProps": {
+    "prefix": "getStaticProps",
+    "body": [
+      "export const getStaticProps = async (${1:ctx}) => {",
+      "",
+      "",
+      "\treturn {",
+      "\t\tprops:{",
+      "\t\t\t${2:data:null}",
+      "\t\t}",
+      "\t}",
+      "}"
+    ],
+    "description": "Next GetStaticProps"
+  },
+
+  "Nextjs getStaticPaths": {
+    "prefix": "getStaticPaths",
+    "body": [
+      "export const getStaticPaths = async () => {",
+      "",
+      "",
+      "\treturn {",
+      "\t\tpaths:${1:[]},",
+      "\t\tfallback:${2:false}",
+      "\t}",
+      "}"
+    ],
+    "description": "Next GetStaticPaths"
+  },
+
+  "Nextjs getInitialProps": {
+    "prefix": "getInitialProps",
+    "body": [
+      "${1:${TM_FILENAME_BASE}}.getInitialProps = async (${2:ctx}) => {",
+      "",
+      "\treturn {",
+      "\t\t${3:data:null}",
+      "\t}",
+      "}"
+    ],
+    "description": "Next GetInitialProps"
+  },
+
+  // handleChange function
+  "handleChange": {
+    "prefix": "handleChange",
+    "body": [
+      "const handleChange = ({ target: { value } }) => {",
+      "    console.log('value', value);",
+      "    set${1:nameOfYourState}(value);",
+      "  };",
+      ""
+    ],
+    "description": "Function handleChange for change value inputs"
+  },
+
+  // Declare a new state
+  "Declare a new state variable using State Hook": {
+    "prefix": "usestate",
+    "body": ["const [${1}, set${1/(.*)/${1:/capitalize}/}] = useState($2);"],
+    "description": "Declare a new state Variable using the State Hook. Hit Tab to apply CamelCase to function"
+  },
+
+  // basic div
+  "div": {
+    "prefix": "div",
+    "body": ["<div className=\"${1:}\"></div>"],
+    "description": "basic div"
+  },
+
+  // React defaukt props
+  "React ES.next default props definition": {
+    "prefix": "defaultProps",
+    "body": ["${1:${TM_FILENAME_BASE}}.defaultProps = {", "${2}", "}"],
+    "description": "React ES.next default props definition"
+  },
+
+  // PropType
+  "React ES.next prop types definition": {
+    "prefix": "propTypes",
+    "body": [" ${1:${TM_FILENAME_BASE}}.PropTypes = {", " ${2}", "}"],
+    "description": "React ES.next prop types definition"
+  },
+
+  // PropType string
+  "React PropType string": {
+    "prefix": "propTypesstring",
+    "body": "${1}: PropTypes.string,",
+    "description": "string propType"
+  },
+
+  "React PropType string required": {
+    "prefix": "propTypesstringr",
+    "body": "${1:NameProps}: PropTypes.string.isRequired,",
+    "description": "string propType required"
+  },
+
+  // PropType number
+  "React PropType number": {
+    "prefix": "propTypesnumber",
+    "body": "${1}: PropTypes.number,",
+    "description": "string propType"
+  },
+
+  "React PropType string number": {
+    "prefix": "propTypesnumber",
+    "body": "${1:NameProps}: PropTypes.number.isRequired,",
+    "description": "string propType required"
+  }
+}
